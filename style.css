@@ -1,93 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galian 2026 Recap</title>
+:root {
+    --soft-pink: #fdf2f4;
+    --dusty-rose: #d4a5b2;
+    --deep-rose: #b07d88;
+    --lace-bg: #fffcfd;
+}
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--lace-bg);
+    color: #6d5d61;
+    line-height: 1.8;
+}
 
-    <meta property="og:title" content="Galian 2026 Recap">
-    <meta property="og:description" content="A recap of the Galian 2026 event at Core Gateway College Inc.">
-    
-    <meta property="og:image" content="https://I-INPUT-ANG-GITHUB-USERNAME-DITO.github.io/galian-recap-2026/pics/mural.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://I-INPUT-ANG-GITHUB-USERNAME-DITO.github.io/galian-recap-2026/">
-    <meta property="og:type" content="website">
+header {
+    width: 100%;
+    height: 85vh;
+    /* Siguraduhin na 'mural.jpg' ang filename sa pics folder */
+    background: #a68ba0 url('pics/mural.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://I-INPUT-ANG-GITHUB-USERNAME-DITO.github.io/galian-recap-2026/pics/mural.jpg">
-</head>
-<body>
+.glass-box {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 55px 45px;
+    border-radius: 35px;
+    text-align: center;
+    width: 80%;
+    max-width: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(176, 125, 136, 0.15);
+    z-index: 10;
+}
 
-<header>
-    <div class="glass-box">
-        <h1>Galian 2026</h1>
-        <p class="subtitle">Core Gateway College Inc.</p>
-        <div class="glass-line"></div>
-    </div>
-    <div class="fade-overlay"></div>
-</header>
+.glass-box h1 {
+    font-family: 'Dancing Script', cursive;
+    color: var(--deep-rose);
+    font-size: 3.2rem;
+    margin: 0;
+}
 
-<div class="container">
-    
-    <section>
-        <div class="coquette-card">
-            <div class="card-tag">Mural Art</div>
-            <img src="pics/mural.jpg" alt="Tatak CGCI mural" class="full-img">
-            <div class="padding">
-                <h2 class="script-title">Tatak CGCI Mural</h2>
-                <p>
-                    The moment I entered the campus during Galian 2026, the mural was the first thing that caught my attention. 
-                    Its vibrant colors and detailed artwork symbolize identity, growth, and unity.
-                </p>
-            </div>
-        </div>
-    </section>
+.subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--dusty-rose);
+    margin-top: 10px;
+}
 
-    <section>
-        <div class="coquette-card">
-            <div class="padding">
-                <h2 class="script-title">Live Band Performances</h2>
-                <p>
-                    The sound of a live band started playing as the day ended, adding a relaxed and memorable vibe.
-                </p>
-            </div>
-            <img src="pics/band.jpg" alt="Student band" class="inner-img">
-        </div>
-    </section>
+.glass-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--dusty-rose), transparent);
+    margin: 20px auto 0;
+}
 
-    <section>
-        <div class="coquette-card">
-            <div class="padding">
-                <h2 class="script-title">BSCS Thesis Expo</h2>
-                <p>
-                    One project that stood out was SalinKibo, which creatively used a teddy bear design to make assistive technology more approachable.
-                </p>
-            </div>
-            <img src="pics/thesis.jpg" alt="Thesis presentation" class="inner-img">
-        </div>
-    </section>
+.fade-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(to bottom, transparent, var(--lace-bg));
+    z-index: 5;
+}
 
-    <section>
-        <div class="coquette-card last-card">
-            <div class="padding">
-                <h2 class="script-title">Cultural Dance</h2>
-                <p>
-                    Seeing every course come together on one stage made the presentation feel grand and unforgettable.
-                </p>
-            </div>
-            <img src="pics/dance.jpg" alt="Cultural dance" class="inner-img">
-        </div>
-    </section>
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-</div>
+.coquette-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    box-shadow: 0 15px 35px rgba(212, 165, 178, 0.12);
+    border: 1px solid #fef3f6;
+}
 
-<footer>
-    <p class="signature">By Katrina G. Vergel de Dios <span class="thin-heart">♡</span></p>
-</footer>
+.padding { padding: 40px; text-align: center; }
+.full-img { width: 100%; display: block; }
+.inner-img { width: 90%; margin: 0 auto 40px; display: block; border-radius: 20px; box-shadow: 0 10px 25px rgba(176, 125, 136, 0.15); }
+.script-title { font-family: 'Dancing Script', cursive; color: var(--deep-rose); font-size: 2.5rem; margin-bottom: 15px; }
 
-</body>
-</html>
+footer { text-align: center; padding: 100px 20px 80px; }
+.signature { font-size: 1rem; color: var(--deep-rose); font-weight: 500; }
+
+@media (max-width: 600px) {
+    header { height: 70vh; }
+    .glass-box { width: 90%; padding: 40px 25px; }
+    .glass-box h1 { font-size: 2.4rem; }
+}
